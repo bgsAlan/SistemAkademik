@@ -69,7 +69,6 @@ include '../../layout/sidebar.php';
                             Form Buka Presensi
                         </h4>
 
-                        <?php if (!$presensi) : ?>
 
                             <form action="../../controller/presensi_controller.php"
                                 method="POST">
@@ -214,13 +213,6 @@ include '../../layout/sidebar.php';
 
                             </form>
 
-                        <?php else : ?>
-
-                            <div class="alert alert-warning mb-0">
-                                Masih ada presensi aktif
-                            </div>
-
-                        <?php endif; ?>
 
                     </div>
 

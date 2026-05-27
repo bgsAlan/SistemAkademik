@@ -10,11 +10,49 @@ if (isset($_POST["submit"])) {
     $desc = $_POST["description"];
 
     //Cek apakah ada presensi aktif
-    $check = mysqli_query($conn, "SELECT* FROM presensi WHERE status='aktif';");
+    if ($target == 'guru') {
+
+        $check = mysqli_query(
+            $conn,
+
+            "SELECT * FROM presensi
+
+        WHERE status='aktif'
+
+        AND (
+            target='guru'
+            OR target='semua'
+        )"
+        );
+    } else if ($target == 'murid') {
+
+        $check = mysqli_query(
+            $conn,
+
+            "SELECT * FROM presensi
+
+        WHERE status='aktif'
+
+        AND (
+            target='murid'
+            OR target='semua'
+        )"
+        );
+    } else {
+
+        $check = mysqli_query(
+            $conn,
+
+            "SELECT * FROM presensi
+        WHERE status='aktif'"
+        );
+    }
+
+    // kalau masih ada presensi aktif
     if (mysqli_num_rows($check) > 0) {
 
         $_SESSION['error'] =
-            "Masih ada presensi yang aktif";
+            "Masih ada presensi aktif untuk target tersebut";
 
         header("Location: ../view/admin/open_presensi_view.php");
         exit;
