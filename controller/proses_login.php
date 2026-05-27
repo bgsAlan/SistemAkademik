@@ -6,13 +6,13 @@ require_once ("../config/db.php");
 if (isset($_SESSION['user_id'])) {
 
     if($_SESSION['role'] == 'admin') {
-        header("Location: ../view/dashboard_admin_view.php");
+        header("Location: ../view/admin/dashboard_admin_view.php");
         exit;
     } else if($_SESSION['role'] == 'guru'){
-        header("Location: ../view/dashboard_guru_view.php");
+        header("Location: ../view/guru/dashboard_guru_view.php");
         exit;
     }else {
-        header("Location: ../view/dashboard_siswa_view.php");
+        header("Location: ../view/siswa/dashboard_siswa_view.php");
         exit;
     }
 }
@@ -43,13 +43,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        
         //Cek role
         if($user['role'] == 'admin') {
-            header("Location: ../view/dashboard_admin_view.php");
+            header("Location: ../view/admin/dashboard_admin_view.php");
             exit;
         }else if ($user['role'] == 'guru') {
-            header("Location: ../view/dashboard_guru_view.php");
+            header("Location: ../view/guru/dashboard_guru_view.php");
             exit;
         }else {
-            header("Location: ../view/dashboard_siswa_view.php");
+            header("Location: ../view/siswa/dashboard_siswa_view.php");
             exit;
         }
     }else {
