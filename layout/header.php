@@ -65,4 +65,11 @@
     </style>
 </head>
 
-<body></body>
+<body>
+    <button class="btn btn-dark d-lg-none m-3"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#sidebarMenu">
+        <i class="bi bi-list"></i>
+    </button>
+</body>
