@@ -8,3 +8,4 @@ $result = mysqli_query($conn, "SELECT * FROM presensi
     WHERE status = 'aktif' 
     AND (target = 'guru' OR target = 'semua') 
     ORDER BY id DESC");
+?>

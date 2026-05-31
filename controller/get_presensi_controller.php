@@ -12,3 +12,4 @@ $query = mysqli_query(
 
     ORDER BY id DESC"
 );
+?>

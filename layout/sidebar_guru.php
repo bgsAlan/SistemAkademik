@@ -14,7 +14,7 @@
         <i class="bi bi-clipboard-data"></i> Tambah Nilai Siswa
     </a>
 
-    <a href="lihat_nilai_view.php">
+    <a href="data_nilai_view.php">
         <i class="bi bi-clipboard-data"></i> Lihat Nilai Siswa
     </a>
 
@@ -51,7 +51,7 @@
             <i class="bi bi-clipboard-data"></i> Tambah Nilai Siswa
         </a>
 
-        <a href="lihat_nilai_view.php" class="d-block text-white mb-3 text-decoration-none">
+        <a href="data_nilai_view.php" class="d-block text-white mb-3 text-decoration-none">
             <i class="bi bi-clipboard-data"></i> Lihat Nilai Siswa
         </a>
 

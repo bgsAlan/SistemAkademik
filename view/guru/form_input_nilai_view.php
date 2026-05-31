@@ -19,7 +19,7 @@ require __DIR__ . '/../../controller/input_nilai_controller.php';
 
             <div class="card-body">
 
-                <form action="../../controller/simpan_nilai_controller.php" method="POST">
+                <form action="../../controller/insert_nilai_controller.php" method="POST">
 
                     <input type="hidden"
                         name="siswa_id"
@@ -32,6 +32,7 @@ require __DIR__ . '/../../controller/input_nilai_controller.php';
 
                         <input type="text"
                             class="form-control"
+                            name="nama_siswa"
                             value="<?= $siswa['nama'] ?>"
                             readonly>
                     </div>
@@ -43,6 +44,7 @@ require __DIR__ . '/../../controller/input_nilai_controller.php';
 
                         <input type="text"
                             class="form-control"
+                            name="nisn"
                             value="<?= $siswa['nisn'] ?>"
                             readonly>
                     </div>
