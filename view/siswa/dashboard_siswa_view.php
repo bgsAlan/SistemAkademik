@@ -2,8 +2,20 @@
 session_start();
 
 include '../../layout/header.php';
-include '../../layout/sidebar_guru.php';
+include '../../layout/sidebar_siswa.php';
+require_once('../../config/db.php');
+
+$user_id = $_SESSION['user_id'];
+
+$query = mysqli_query($conn,"
+    SELECT nama
+    FROM siswa
+    WHERE user_id = '$user_id'
+");
+
+$siswa = mysqli_fetch_assoc($query);
 ?>
+
 
 <div class="main-content">
 
@@ -13,11 +25,11 @@ include '../../layout/sidebar_guru.php';
         <div class="mb-4">
 
             <h2 class="fw-bold">
-                Dashboard Guru
+                DashboardSiswa
             </h2>
 
             <p class="text-muted mb-0">
-                Selamat datang di dashboard guru
+                Selamat datang di dashboard <?=$siswa['nama']?>
             </p>
 
         </div>
@@ -52,7 +64,7 @@ include '../../layout/sidebar_guru.php';
                             Lakukan presensi harian guru
                         </p>
 
-                        <a href="presensi_guru_view.php"
+                        <a href="presensi_view.php"
                             class="btn btn-primary rounded-3 px-4">
 
                             Isi Presensi
